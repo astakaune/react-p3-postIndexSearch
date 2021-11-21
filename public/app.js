@@ -1,13 +1,205 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/app.js":
 /*!********************!*\
   !*** ./src/app.js ***!
   \********************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\astak\\Desktop\\Front-END\\5_React\\Kaselionis\\react-p3-postIndexSearch\\src\\app.js: Identifier 'deleteHistory' has already been declared. (5:7)\n\n\u001b[0m \u001b[90m 3 |\u001b[39m \u001b[36mimport\u001b[39m searchList \u001b[36mfrom\u001b[39m \u001b[32m\"./modules/searchList\"\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 4 |\u001b[39m \u001b[36mimport\u001b[39m deleteHistory \u001b[36mfrom\u001b[39m \u001b[32m\"./modules/deleteHistory\"\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m \u001b[36mimport\u001b[39m deleteHistory \u001b[36mfrom\u001b[39m \u001b[32m\"./modules/formFilling\"\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m   |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 6 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 7 |\u001b[39m renderForm()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 8 |\u001b[39m searchCode()\u001b[33m;\u001b[39m\u001b[0m\n    at Parser._raise (C:\\Users\\astak\\Desktop\\Front-END\\5_React\\Kaselionis\\react-p3-postIndexSearch\\node_modules\\@babel\\parser\\lib\\index.js:541:17)\n    at Parser.raiseWithData (C:\\Users\\astak\\Desktop\\Front-END\\5_React\\Kaselionis\\react-p3-postIndexSearch\\node_modules\\@babel\\parser\\lib\\index.js:534:17)\n    at Parser.raise (C:\\Users\\astak\\Desktop\\Front-END\\5_React\\Kaselionis\\react-p3-postIndexSearch\\node_modules\\@babel\\parser\\lib\\index.js:495:17)\n    at ScopeHandler.checkRedeclarationInScope (C:\\Users\\astak\\Desktop\\Front-END\\5_React\\Kaselionis\\react-p3-postIndexSearch\\node_modules\\@babel\\parser\\lib\\index.js:1688:12)\n    at ScopeHandler.declareName (C:\\Users\\astak\\Desktop\\Front-END\\5_React\\Kaselionis\\react-p3-postIndexSearch\\node_modules\\@babel\\parser\\lib\\index.js:1654:12)\n    at Parser.checkLVal (C:\\Users\\astak\\Desktop\\Front-END\\5_React\\Kaselionis\\react-p3-postIndexSearch\\node_modules\\@babel\\parser\\lib\\index.js:11086:24)\n    at Parser.parseImportSpecifierLocal (C:\\Users\\astak\\Desktop\\Front-END\\5_React\\Kaselionis\\react-p3-postIndexSearch\\node_modules\\@babel\\parser\\lib\\index.js:14846:10)\n    at Parser.maybeParseDefaultImportSpecifier (C:\\Users\\astak\\Desktop\\Front-END\\5_React\\Kaselionis\\react-p3-postIndexSearch\\node_modules\\@babel\\parser\\lib\\index.js:14944:12)\n    at Parser.parseImport (C:\\Users\\astak\\Desktop\\Front-END\\5_React\\Kaselionis\\react-p3-postIndexSearch\\node_modules\\@babel\\parser\\lib\\index.js:14811:31)\n    at Parser.parseStatementContent (C:\\Users\\astak\\Desktop\\Front-END\\5_React\\Kaselionis\\react-p3-postIndexSearch\\node_modules\\@babel\\parser\\lib\\index.js:13454:27)");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_renderForm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/renderForm */ "./src/modules/renderForm.js");
+/* harmony import */ var _modules_searchCode__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/searchCode */ "./src/modules/searchCode.js");
+/* harmony import */ var _modules_searchList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/searchList */ "./src/modules/searchList.js");
+/* harmony import */ var _modules_deleteHistory__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/deleteHistory */ "./src/modules/deleteHistory.js");
+
+
+
+ // import formFilling from "./modules/formFilling";
+
+(0,_modules_renderForm__WEBPACK_IMPORTED_MODULE_0__["default"])();
+(0,_modules_searchCode__WEBPACK_IMPORTED_MODULE_1__["default"])();
+(0,_modules_searchList__WEBPACK_IMPORTED_MODULE_2__["default"])();
+(0,_modules_deleteHistory__WEBPACK_IMPORTED_MODULE_3__["default"])(); // formFilling();
+
+/***/ }),
+
+/***/ "./src/modules/ajaxService.js":
+/*!************************************!*\
+  !*** ./src/modules/ajaxService.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var ajaxService = function ajaxService(term) {
+  var url = "https://api.postit.lt/?term=";
+  var key = "https://api.postit.lt/v2/?city=Vilnius&address=Savanorių+12&key=postit.lt-examplekey";
+  return fetch("".concat(url).concat(term, "&key=").concat(key)).then(function (response) {
+    return response.json();
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ajaxService);
+console.log("as esu");
+
+/***/ }),
+
+/***/ "./src/modules/deleteHistory.js":
+/*!**************************************!*\
+  !*** ./src/modules/deleteHistory.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var deleteHistory = function deleteHistory() {
+  document.querySelector(".btn-danger").addEventListener("click", function (event) {
+    console.log(event);
+    event.target.classList.add("hidden");
+    localStorage.clear();
+    document.querySelector(".list-group").innerHTML = "";
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (deleteHistory);
+
+/***/ }),
+
+/***/ "./src/modules/form.js":
+/*!*****************************!*\
+  !*** ./src/modules/form.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var form = function form() {
+  return "\n<div class=\"form-group mb-2\">\n<input type=\"text\" class=\"form-control term\" placeholder=\"Address\">\n</div>\n\n<div class=\"form-group mx-sm-3 mb-2\">\n<input type=\"text\" class=\"form-control result\" readonly>\n</div>\n\n<button type=\"submit\" class=\"btn btn-primary mb-2\">Search for index</button>\n<button type=\"reset\" class=\"btn btn-secondary mb-2 history\">Search history</button>\n<button type=\"button\" class=\"btn btn-danger mb-2 hidden \">Delete history</button>\n";
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (form);
+
+/***/ }),
+
+/***/ "./src/modules/renderForm.js":
+/*!***********************************!*\
+  !*** ./src/modules/renderForm.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./form */ "./src/modules/form.js");
+
+
+var renderForm = function renderForm() {
+  var formElement = document.createElement("form");
+  formElement.className = "form-inline";
+  formElement.innerHTML = (0,_form__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  document.querySelector("main .card-body").appendChild(formElement);
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (renderForm);
+
+/***/ }),
+
+/***/ "./src/modules/searchCode.js":
+/*!***********************************!*\
+  !*** ./src/modules/searchCode.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _ajaxService__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ajaxService */ "./src/modules/ajaxService.js");
+/* harmony import */ var _storeSearch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./storeSearch */ "./src/modules/storeSearch.js");
+
+
+
+var searchCode = function searchCode() {
+  document.querySelector("form").addEventListener("submit", function (event) {
+    event.preventDefault(); //formos numatytoji elgsena, siusti duomenis i back enda. sustabdome siuntima ir keiciame numatyta formos elgsena.
+
+    var searchTerm = document.querySelector(".term").value;
+    var searchResponce;
+    (0,_ajaxService__WEBPACK_IMPORTED_MODULE_0__["default"])(searchTerm).then(function (result) {
+      return searchResponce = result;
+    }).then(function () {
+      return console.log(searchResponce);
+    }) //atsakymas i console.log
+    .then(function () {
+      if (searchResponce.total > 0) {
+        document.querySelector(".result").value = searchResponce.data[0].post_code;
+        (0,_storeSearch__WEBPACK_IMPORTED_MODULE_1__["default"])(searchResponce.data[0].post_code, searchResponce.data[0]);
+      } else {
+        document.querySelector("main").innerHTML += "<p>Error</p>";
+      }
+    });
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (searchCode);
+
+/***/ }),
+
+/***/ "./src/modules/searchList.js":
+/*!***********************************!*\
+  !*** ./src/modules/searchList.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var searchList = function searchList() {
+  document.querySelector(".history").addEventListener("click", function () {
+    document.querySelector(".btn-danger").classList.remove("hidden");
+
+    for (var key in localStorage) {
+      if (localStorage.getItem(key) !== null) {
+        var result = JSON.parse(localStorage.getItem(key));
+        console.log(result);
+        var li = document.createElement("li");
+        li.className = "list-group-item";
+        li.textContent = "Address: ".concat(result.address, "/ Post index: LT-").concat(result.post_code, ";");
+        document.querySelector("ul").appendChild(li);
+      }
+    }
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (searchList);
+
+/***/ }),
+
+/***/ "./src/modules/storeSearch.js":
+/*!************************************!*\
+  !*** ./src/modules/storeSearch.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var storeSearch = function storeSearch(id, data) {
+  localStorage.setItem(id, JSON.stringify(data));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (storeSearch);
 
 /***/ }),
 
@@ -17,7 +209,6 @@ throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
@@ -83,6 +274,18 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
 /******/ 		};
 /******/ 	})();
 /******/ 	
