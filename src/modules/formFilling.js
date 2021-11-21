@@ -18,7 +18,7 @@ const formFilling = () => {
 				data: {
 					term: $.trim(request.term),
 					limit: 20,
-					key: "postit.lt-examplekey",
+					key: "https://api.postit.lt/v2/?city=Vilnius&address=Savanorių+12&key=postit.lt-examplekey",/// ar sitas????
 				},
 				success: function (resp) {
 					var r = [];
