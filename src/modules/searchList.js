@@ -1,5 +1,6 @@
 const searchList = () => {
 	document.querySelector(".history").addEventListener("click", () => {
+		document.querySelector(".btn-danger").classList.remove("hidden");
 		for (let key in localStorage) {
 			if (localStorage.getItem(key) !== null) {
 				let result = JSON.parse(localStorage.getItem(key));
@@ -14,3 +15,4 @@ const searchList = () => {
 };
 
 export default searchList;
+

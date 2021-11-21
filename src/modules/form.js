@@ -10,6 +10,7 @@ const form = () => {
 
 <button type="submit" class="btn btn-primary mb-2">Search for index</button>
 <button type="reset" class="btn btn-secondary mb-2 history">Search history</button>
+<button type="button" class="btn btn-danger mb-2 hidden ">Delete history</button>
 `;
 };
 

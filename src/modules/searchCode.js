@@ -10,7 +10,7 @@ const searchCode = () => {
 			.then((result) => searchResponce = result)
 			.then(() => console.log(searchResponce)) //atsakymas i console.log
 			.then(() => {
-				if (searchResponce.total === 1) {
+				if (searchResponce.total > 0) {
 					document.querySelector(".result").value =
 						searchResponce.data[0].post_code;
                     storeSearch(searchResponce.data[0].post_code, searchResponce.data[0]);
@@ -22,3 +22,4 @@ const searchCode = () => {
 };
 
 export default searchCode;
+

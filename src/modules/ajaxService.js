@@ -9,3 +9,4 @@ const ajaxService = (term) => {
 };
 export default ajaxService;
 console.log("as esu");
+

@@ -3,13 +3,13 @@
 ![Gluten Status](https://img.shields.io/badge/Gluten-Free-green.svg)
 ![Eco Status](https://img.shields.io/badge/ECO-Friendly-green.svg)
 
-# REACT-STARTERKIT for learning projects No.1
+# REACT project for post index automatic search
 
 _with MARTYNAS KAŠELIONIS from BTI _
 
-This project is for educational porpuses only . Pull request are welcome, but priority for project authors! Thank you for your cooperation!
+This project is for educational porpuses only. Pull request are welcome, but priority for project authors! Thank you for your cooperation!
 
-Site published at: https://github.com/astakaune/react-starterkit-kasel
+Site published at: https://github.com/astakaune/react-p4-postIndexSearch-kasel
 
 
 ## Project VSC terminal commands:
